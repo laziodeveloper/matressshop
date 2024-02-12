@@ -1,58 +1,25 @@
-const navShowBtn = document.querySelector('.navbar-show-btn');
-const navHideBtn = document.querySelector('.navbar-hide-btn');
-const sideNavbar = document.getElementById('side-navbar');
-navShowBtn.addEventListener('click', () => {
-    sideNavbar.classList.add('side-navbar-show');
-});
 
-navHideBtn.addEventListener('click', () => {
-    sideNavbar.classList.remove('side-navbar-show');
-});
+const sidebarCloseBtn = get(".btn--toggle-close");
+const sidebarOpenBtn = get(".btn--toggle-open");
+const sidebarOverlay = get(".sidebar__overlay");
 
+sidebarCloseBtn.addEventListener("click", () =>
+  sidebarOverlay.classList.remove("show")
+);
 
-const categoryItems = document.getElementById('category-list-items');
-const categoryTogglerBtn = document.querySelector('.category-toggler-btn');
-categoryTogglerBtn.addEventListener('click', () => {
-    categoryItems.classList.toggle('show-category-items');
+sidebarOpenBtn.addEventListener("click", () =>
+  sidebarOverlay.classList.add("show")
+);
 
-    if(categoryItems.classList.contains('show-category-items')){
-        categoryTogglerBtn.querySelector('i').className = "fas fa-circle-arrow-up";
-    } else{
-        categoryTogglerBtn.querySelector('i').className = "fas fa-circle-arrow-down";
-    }
-});
+// CART TOGGLE
+const cartOpenBtn = get(".shopping-cart");
+const cartCloseBtn = get(".cart__close");
+const cartOverlay = get(".cart__overlay");
 
+export const openCart = () => cartOverlay.classList.add("show");
 
-const feedbackItems = document.querySelectorAll('.feedback-item');
-const feedbackBtns = document.querySelectorAll('.feedback-btn');
-const feedbackDisplay = document.querySelector('#feedback-display');
+cartOpenBtn.addEventListener("click", openCart);
 
-let activeId = 1;
-changeFeedback(activeId);
-function changeFeedback(id){
-    feedbackItems.forEach((item) => {
-        if(id == item.dataset.id){
-       
-            [feedbackDisplay.dataset.id, item.dataset.id] = [item.dataset.id, feedbackDisplay.dataset.id];
-          
-            [feedbackDisplay.innerHTML, item.innerHTML] = [item.innerHTML, feedbackDisplay.innerHTML];
-          
-            [feedbackDisplay.querySelector('img').src, item.querySelector('img').src] = [item.querySelector('img').src, feedbackDisplay.querySelector('img').src];
-        }
-    });
-}
-
-feedbackBtns.forEach((btn, index) =>{
-    btn.addEventListener('click', () => {
-        activeId = index + 1;
-        feedbackBtnReset();
-        btn.classList.add('feedback-active-btn');
-        changeFeedback(activeId);
-    });
-});
-
-function feedbackBtnReset(){
-    feedbackBtns.forEach((btn) => {
-        btn.classList.remove('feedback-active-btn');
-    });
-}
+cartCloseBtn.addEventListener("click", () =>
+  cartOverlay.classList.remove("show")
+);

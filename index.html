@@ -1,144 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>matress Site</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Luxurify</title>
+   
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;500;700&family=Cinzel:wght@400;600;700&family=Poppins:ital,wght@0,400;1,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+ 
+    <header class="header">
+      <div class="section-center">
+        <div class="header__hero">
+          <nav class="header__nav">
+            <button class="btn--toggle-open">
+              <svg
+                width="62"
+                height="52"
+                viewBox="0 0 62 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M47.6667 17.5218H1"
+                  stroke="#FFEAB9"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M61 1H1"
+                  stroke="#FFEAB9"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M61 34.0433H1"
+                  stroke="#FFEAB9"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M47.6667 50.5651H1"
+                  stroke="#FFEAB9"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
 
-    <link rel = "stylesheet" href = "/css/utilities.css">
+            <ul class="header__list">
+              <li>
+                <a href="./index.html" class="header__link" style="color: burlywood;">home</a>
+              </li>
+              <li>
+                <a href="./products.html" class="header__link" style="color: burlywood;">products</a>
+                <li class="menu-category">
+                  <a href="#" class="menu-title" style="color: burlywood;">Categories</a>
+      
+                
+              </li>
+              <li>
+                <a href="./about.html" class="header__link" style="color: burlywood;">about</a>
+              </li>
+            </ul>
 
-    <link rel = "stylesheet" href = "css/style.css">
-</head>
-<body>
+            <div class="header__logo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="header__logo-img"
+              >
+                <path
+                  d="M13 23v-14h11l-11 14zm-2 0v-14h-11l11 14zm-3.796-22l4.736 5.413 4.06-5.413h-8.796zm11.061.313l-4.265 5.687h10l-5.735-5.687zm-8.469 5.687l-4.479-5.119-5.317 5.119h9.796z"
+                />
+              </svg>
+              <p class="header__logo-text"><span>l</span>uxurify</p>
+            </div>
 
-    <div class = "holder">
-   
-        <nav class = "navbar bg-brown flex">
-            <div class = "container flex">
-                <div class = "toggler-and-category bg-brown text-white flex">
-                    <button type = "button" class = "btn navbar-show-btn text-white">
-                        <i class = "fas fa-bars"></i>
+            <button class="shopping-cart">
+              <svg
+                viewBox="0 0 69 69"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="shopping-cart__img"
+              >
+                <path
+                  d="M22.3334 63.1763C22.3334 66.3504 20.0934 68.9195 17.3334 68.9195C14.5734 68.9195 12.3334 66.3504 12.3334 63.1763C12.3334 60.006 14.5734 57.433 17.3334 57.433C20.0934 57.433 22.3334 60.006 22.3334 63.1763ZM55.0134 0L43.5767 45.9464H36.57L45.0434 11.4866H25.0667C25.4434 13.3321 25.6667 15.2504 25.6667 17.2299C25.6667 30.9755 15.9667 42.1175 4.00003 42.1175C2.64336 42.1175 1.3167 41.9567 0.0300293 41.681L4.38336 53.6041H48.5134L60.0934 7.65773H66.5234L69 0H55.0134ZM34 57.433C31.24 57.433 29 60.0021 29 63.1763C29 66.3504 31.24 68.9195 34 68.9195C36.76 68.9195 39 66.3504 39 63.1763C39 60.006 36.76 57.433 34 57.433Z"
+                  fill="white"
+                />
+              </svg>
+
+              <div class="shopping-cart__value-box">
+                <span class="shopping-cart__value">0</span>
+              </div>
+            </button>
+          </nav>
+          <div class="header__info">
+            <h1 class="header__heading">
+              rest, relax <br />
+              <span>&</span> unwind
+            </h1>
+            <p class="header__sub-heading">embrace your choices</p>
+            <a href="./products.html" class="btn btn--cta" style="background-color: burlywood;">shop now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__img-box">
+        <img src="/images/header-sofa-img.png" alt="" class="header__img" />
+      </div>
+
+    
+    
+
+    <section class="featured">
+      <div class="section__title">
+        <h2 style="text-align: center;font-size: 40px;font-family: cursive;color:linear-gradient(var(--accent-color) 10%, var(--accent-color-gradient) 90%);"><span>/</span> featured</h2>
+      </div>
+     
+       <div class="section-center products__center">
+
+        <form class="form">
+            <input class="form__search" type="text" placeholder="search...">
+
+            <div class="form__companies">
+                <p class="form__companies-title">
+                    company
+                </p>
+               <div class="form__companies-box">
+
+               </div>
+            </div>
+
+            <div class="form__range-box">
+                <p class="form__range-title">
+                    price
+                </p>
+                <input type="range" min="0" max="50" class="form__range">
+                <p class="form__range-text">upto: $<span class="form__range-value">50</span></p>
+            </div>
+        </form>
+        
+        <div class="cards products__cards">
+          
+        <article class="card">
+
+            <div class="card__img">
+                <img src="https://kurlon.com/wp-content/uploads/2023/12/Inspire1_1400x.jpg" alt="">
+
+                <div class="card__icons">
+                    <button class="card__search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" fill="white"/></svg>
                     </button>
-                    <div class = "category-list">
-                        <span>Category</span>
-                        <button type = "button" class = "btn category-toggler-btn text-white">
-                            <i class = "fas fa-circle-arrow-down"></i>
-                        </button>
-                    </div>
 
-                
-                    <ul id = "side-navbar" class = "bg-white text-uppercase">
-                        <button type = "button" class = "btn navbar-hide-btn text-dark">
-                            <i class = "fas fa-times"></i>
-                        </button>
-                        <li><a href = "#">home</a></li>
-                        <li><a href = "#">featured</a></li>
-                        <li><a href = "#">blog</a></li>
-                        <li><a href = "#">shop</a></li>
-                        <li><a href = "#">about</a></li>
-                        <li><a href = "#">contact</a></li>
-                    </ul>
-                 
-                    <ul id = "category-list-items" class = "bg-white">
-                        <li><a href = "#">for kids</a></li>
-                        <li><a href = "#">spintreats</a></li>
-                        <li><a href = "#">dreamsleep</a></li>
-                        <li><a href = "#">choir</a></li>
-                        <li><a href = "#">sponge</a></li>
-                        <li><a href = "#">basic</a></li>
-                    
-                    
-                    </ul>
+                    <button class="card__shopping">
+                        <svg
+                        width="24" height="24"
+                        viewBox="0 0 69 69"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M22.3334 63.1763C22.3334 66.3504 20.0934 68.9195 17.3334 68.9195C14.5734 68.9195 12.3334 66.3504 12.3334 63.1763C12.3334 60.006 14.5734 57.433 17.3334 57.433C20.0934 57.433 22.3334 60.006 22.3334 63.1763ZM55.0134 0L43.5767 45.9464H36.57L45.0434 11.4866H25.0667C25.4434 13.3321 25.6667 15.2504 25.6667 17.2299C25.6667 30.9755 15.9667 42.1175 4.00003 42.1175C2.64336 42.1175 1.3167 41.9567 0.0300293 41.681L4.38336 53.6041H48.5134L60.0934 7.65773H66.5234L69 0H55.0134ZM34 57.433C31.24 57.433 29 60.0021 29 63.1763C29 66.3504 31.24 68.9195 34 68.9195C36.76 68.9195 39 66.3504 39 63.1763C39 60.006 36.76 57.433 34 57.433Z"
+                            fill="white"
+                        />
+                        </svg>
+                    </button>
                 </div>
+                    
+            </div>
+            
+            <div class="card__info">
+                <p class="card__title">Trendy</p>
+                <span class="card__price">$9.99</span>
+            </div>
+        </article>
+      
+        <article class="card">
 
-           
-                <div class = "navbar-collapse flex">
-                
-                    <ul class = "navbar-nav text-uppercase">
-                        <li class = "nav-item">
-                            <a href = "#" class = "nav-link active-link">
-                                <span class = "nav-link-text">home</span>
-                                <span class = "dropdown-icon">
-                                    <i class = "fas fa-chevron-down"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "#" class = "nav-link">
-                                <span class = "nav-link-text">featured</span>
-                                <span class = "dropdown-icon">
-                                    <i class = "fas fa-chevron-down"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "#" class = "nav-link">
-                                <span class = "nav-link-text">shop</span>
-                                <span class = "dropdown-icon">
-                                    <i class = "fas fa-chevron-down"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "#" class = "nav-link">
-                                <span class = "nav-link-text">blog</span>
-                                <span class = "dropdown-icon">
-                                    <i class = "fas fa-chevron-down"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "#" class = "nav-link">
-                                <span class = "nav-link-text">about</span>
-                            </a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "#" class = "nav-link">
-                                <span class = "nav-link-text">contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                  
-                    <div class = "account-info">
-                        <a href = "#" class = "btn text-white">
-                            <i class = "fas fa-person"></i>
-                        </a>
-                        <a href = "#" class = "btn text-white">
-                            <i class = "fas fa-shopping-basket"></i>
-                        </a>
-                    </div>
-                   
+            <div class="card__img">
+                <img src="https://kurlon.com/wp-content/uploads/2023/06/Spinekare_150x@2x.jpg" alt="">
+
+                <div class="card__icons">
+                    <button class="card__search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" fill="white"/></svg>
+                    </button>
+
+                    <button class="card__shopping">
+                        <svg
+                        width="24" height="24"
+                        viewBox="0 0 69 69"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M22.3334 63.1763C22.3334 66.3504 20.0934 68.9195 17.3334 68.9195C14.5734 68.9195 12.3334 66.3504 12.3334 63.1763C12.3334 60.006 14.5734 57.433 17.3334 57.433C20.0934 57.433 22.3334 60.006 22.3334 63.1763ZM55.0134 0L43.5767 45.9464H36.57L45.0434 11.4866H25.0667C25.4434 13.3321 25.6667 15.2504 25.6667 17.2299C25.6667 30.9755 15.9667 42.1175 4.00003 42.1175C2.64336 42.1175 1.3167 41.9567 0.0300293 41.681L4.38336 53.6041H48.5134L60.0934 7.65773H66.5234L69 0H55.0134ZM34 57.433C31.24 57.433 29 60.0021 29 63.1763C29 66.3504 31.24 68.9195 34 68.9195C36.76 68.9195 39 66.3504 39 63.1763C39 60.006 36.76 57.433 34 57.433Z"
+                            fill="white"
+                        />
+                        </svg>
+                    </button>
                 </div>
+                    
+            </div>
+            
+            <div class="card__info">
+                <p class="card__title">Relax</p>
+                <span class="card__price">$9.99</span>
+            </div>
+        </article>
+
+        <article class="card">
+
+            <div class="card__img">
+                <img src="https://kurlon.com/wp-content/uploads/2023/06/Dreamsleep_1000x1000px_1400x.jpg" alt="">
+
+                <div class="card__icons">
+                    <button class="card__search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" fill="white"/></svg>
+                    </button>
+
+                    <button class="card__shopping">
+                        <svg
+                        width="24" height="24"
+                        viewBox="0 0 69 69"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M22.3334 63.1763C22.3334 66.3504 20.0934 68.9195 17.3334 68.9195C14.5734 68.9195 12.3334 66.3504 12.3334 63.1763C12.3334 60.006 14.5734 57.433 17.3334 57.433C20.0934 57.433 22.3334 60.006 22.3334 63.1763ZM55.0134 0L43.5767 45.9464H36.57L45.0434 11.4866H25.0667C25.4434 13.3321 25.6667 15.2504 25.6667 17.2299C25.6667 30.9755 15.9667 42.1175 4.00003 42.1175C2.64336 42.1175 1.3167 41.9567 0.0300293 41.681L4.38336 53.6041H48.5134L60.0934 7.65773H66.5234L69 0H55.0134ZM34 57.433C31.24 57.433 29 60.0021 29 63.1763C29 66.3504 31.24 68.9195 34 68.9195C36.76 68.9195 39 66.3504 39 63.1763C39 60.006 36.76 57.433 34 57.433Z"
+                            fill="white"
+                        />
+                        </svg>
+                    </button>
+                </div>
+                    
+            </div>
+            
+            <div class="card__info">
+                <p class="card__title">Comfort</p>
+                <span class="card__price">$9.99</span>
+            </div>
+        </article>
+
+        
+          <article class="card">
+
+            <div class="card__img">
+                <img src="https://kurlon.com/wp-content/uploads/2023/06/PureCoir_1400x.jpg" alt="">
+
+                <div class="card__icons">
+                    <button class="card__search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" fill="white"/></svg>
+                    </button>
+
+                    <button class="card__shopping">
+                        <svg
+                        width="24" height="24"
+                        viewBox="0 0 69 69"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M22.3334 63.1763C22.3334 66.3504 20.0934 68.9195 17.3334 68.9195C14.5734 68.9195 12.3334 66.3504 12.3334 63.1763C12.3334 60.006 14.5734 57.433 17.3334 57.433C20.0934 57.433 22.3334 60.006 22.3334 63.1763ZM55.0134 0L43.5767 45.9464H36.57L45.0434 11.4866H25.0667C25.4434 13.3321 25.6667 15.2504 25.6667 17.2299C25.6667 30.9755 15.9667 42.1175 4.00003 42.1175C2.64336 42.1175 1.3167 41.9567 0.0300293 41.681L4.38336 53.6041H48.5134L60.0934 7.65773H66.5234L69 0H55.0134ZM34 57.433C31.24 57.433 29 60.0021 29 63.1763C29 66.3504 31.24 68.9195 34 68.9195C36.76 68.9195 39 66.3504 39 63.1763C39 60.006 36.76 57.433 34 57.433Z"
+                            fill="white"
+                        />
+                        </svg>
+                    </button>
+                </div>
+                    
+            </div>
+            
+            <div class="card__info">
+                <p class="card__title">Active</p>
+                <span class="card__price">$9.99</span>
+            </div>
+        </article>
+        </div>
+       </div>
+
+    </section>
+
+   </header>
+   
+    <div class="container" id="depart">
+      <h3 style="text-align: center;font-family:cursive;font-size: 40px;color: linear-gradient(var(--accent-color) 10%, var(--accent-color-gradient) 90%);" class=" d-flex  justify-content-center  justify-content-sm-start mt-5 mb-3">/ Shop by Department</h3>
+      <div class="row  justify-content-center">
+       <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/06/Chimera_1.webp" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center"> Hosta Pillow</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+         <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/05/Spine-comfort_1400x.jpg" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">Dream sleep</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+         <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/06/Petalz_1400x.webp" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">Petal Pillow</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+         <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/05/Sparkle_1000x1000px_1400x-600x600.jpg" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">Spine Care</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+         <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/06/access-1-.webp" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">COMPACT WEDGE PILLOW</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+        
+        <div class="d-none d-lg-block w-100"></div>
+        <!-- new -->
+         <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/06/Mysore-silk-Plus_1400x.jpg" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">Inspire</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+      
+        <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/05/Luxurino-8_1400x.jpg" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">Spring Mattress</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+        <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/06/Dreamsleep_1000x1000px_1400x.jpg" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">Desire Top</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+        <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/12/Inspire1_1400x.jpg" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">Foam Bed</h5>   
+              </div>
+          </div>
+        </a> 
+        </div>
+        <div class="col-12 col-sm-4 col-lg">
+          <a href="#" class="a text-secondary nav-link ">
+           <div class="card border-0">
+              <img src="https://kurlon.com/wp-content/uploads/2023/06/Magnum-plus_1400x.jpg" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title text-center">Magnum Plus</h5>  
               
-            </div>
-        </nav>
-</div>
-
-<header class = "header bg-light-brown flex" id = "home">
-    <div class = "container">
-        <div class = "header-content grid text-center">
-            <div class = "header-left">
-                <h1>Best Design of Matress Collection</h1>
-                <p class = "text">Improve the atmosphere through interior design that is driven by purposes to bring value into your environment</p>
-                <a href = "#" class = "btn-header text-white bg-brown">shop now</a>
-            </div>
-
-            <div class = "header-right">
-                <img src = "images/header-sofa-img.png">
-           
+              </div>
+          </div>
+        </a> 
+        </div>
+    
+    
+      </div>
     </div>
-</header>
+    <style>
+      html{
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: #f6d16000;
+      }
+      .b25{
+        background: #f6f4f4;
+      }
+      .b1{
+        background: #f5f3f3;
+      }
+      .outlineNone{
+        outline: none !important;
+        border:none;
+        
+      }
+
+      .a:hover img{
+        transition: 0.3s ease-in-out;
+          transform: scale(1.05,1.05);
+          border: 1px solid #f1ecec !important;
+      }
+      .aBord-none:hover img{
+        transition: 0.3s ease-in-out;
+          transform: scale(1.05,1.05);
+         
+      }
+      .gotopbtn{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        bottom: 4.5%;
+        right: 5%;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        z-index: 15
+      }
+    </style>
+
+      
+    </section>
+
+    <div class="container-fluid   pb-5 px-0" id="special">
+      <h3  style="color:linear-gradient(var(--accent-color) 10%, var(--accent-color-gradient) 90%);font-size: 40px;font-family: cursive;" class=" pt-2 text-center text-dark"> / Special Offers</h3>
+      <div class="container-fluid b25 my-2 p-2">
+          <div class="container">
+            <a href="#" class="d-block my-2">
+               <img src="https://assets.mysleepwell.com/uploads/offer_banner_images/desktop%20--%20offer%20banner-1707243959090.jpg" alt="Responsive image">
+            </a>
+  
+            <a href="#" class="d-block my-2">
+               <img src="https://www.emma-sleep.in/cdn/shop/files/FR_Revamp_Home_Matelas.webp?v=1703615799" class="img-fluid" alt="Responsive image">
+            </a>
+             <a href="#" class="d-block my-2">
+               <img src="https://www.duroflexworld.com/cdn/shop/files/CP_BANNERS_All_mattress-web.png?v=1698666572" class="img-fluid" alt="Responsive image">
+            </a>
+          </div>
+      </div>
+  </div>
+  <div class="responsive-container-block bigContainer">
+    <div class="responsive-container-block Container">
+     
+      <img class="mainImg" src="https://cdn.shopify.com/s/files/1/0373/9556/2635/files/about_us_3_3000x3000.png?v=1617455178">
+      <div class="allText aboveText">
+        <p class="text-blk headingText" style="color:linear-gradient(var(--accent-color) 10%, var(--accent-color-gradient) 90%); text-align: center;font-size: 40px;font-family: cursive;">
+          / Our Mission
+        </p>
+        <p class="text-blk subHeadingText">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p class="text-blk description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum pulvinar ullamcorper suspendisse ac eget. Pellentesque tempus leo in ullamcorper quis vestibulum ligula elementum ut.
+        </p>
+        <button style="background-color: #5f4200;" class="explore">
+          Explore
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container" id="weTogether">
+    <h3  style="color: linear-gradient(var(--accent-color) 10%, var(--accent-color-gradient) 90%);text-align: center;font-family: cursive;font-size: 40px;"class="d-flex  justify-content-center  justify-content-sm-start mt-5">/ We are in this together</h3>
+    <div class="row">
+       <div class="col-12 col-sm-6 col-lg-3">
+         
+             <div class="card border-0">
+                <img src="https://www.ashleyfurniture.com/on/demandware.static/-/Library-Sites-AshcommSharedLibrary/default/dw7febee45/images/homepage/footer/20200512/MDS_N1b_Footer_DK.jpg" class="card-img-top border-0" alt="..." >
+                <div class="card-body"> 
+                </div>
+            </div>
+          
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+         <a href="#" class=" text-secondary nav-link ">
+             <div class="card border-0">
+                <img src="https://www.ashleyfurniture.com/on/demandware.static/-/Library-Sites-AshcommSharedLibrary/default/dwa6370a3f/images/homepage/footer/20200512/MDS_N1c_Footer_DK.jpg" class="card-img-top border-0" alt="..." >
+                <div class="card-body"> 
+                </div>
+            </div>
+          </a>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+         <a href="#" class=" text-secondary nav-link ">
+             <div class="card border-0">
+                <img src="https://www.ashleyfurniture.com/on/demandware.static/-/Library-Sites-AshcommSharedLibrary/default/dw6f39ef25/images/homepage/footer/20200512/MDS_N1a_Footer_DK.jpg" class="card-img-top border-0" alt="..." >
+                <div class="card-body"> 
+                </div>
+            </div>
+          </a>
+       </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+         <a href="#" class=" text-secondary nav-link ">
+             <div class="card border-0">
+                <img src="https://www.ashleyfurniture.com/on/demandware.static/-/Library-Sites-AshcommSharedLibrary/default/dw2ce0442b/images/homepage/footer/20200512/MDS_N1d_Footer_DK.jpg" class="card-img-top border-0" alt="..." >
+                <div class="card-body"> 
+                </div>
+            </div>
+          </a>
+       </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<footer class="footer">
+
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+  </ul>
+  <p>&copy;2021 Lazio Digilux | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-
-
-<script src="/script.js"></script>
-
-
-</body>
+  
+    <script src="script.js"></script>
+  </body>
 </html>
